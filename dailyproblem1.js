@@ -41,7 +41,7 @@ function webdeveloper(data){
     },[])
     return result
 }
-//console.log(webdeveloper(data))
+console.log(webdeveloper(data))
 
 //Convert all the salary values into proper numbers instead of strings 
 function salary(data){
@@ -53,7 +53,7 @@ function salary(data){
     },[])
 }
 let numberOfSalary = salary(data)
-//console.log(numberOfSalary)
+console.log(numberOfSalary)
 
 
 //factor the salary
@@ -64,7 +64,7 @@ function factorsalary(salarydata){
         return accumulator;
     },[])
 }
-//console.log(factorsalary(data))
+console.log(factorsalary(data))
 
 
 //sum of all salary
@@ -74,7 +74,7 @@ function sumsalary (data){
        return accumulator
     },0)
 }
-//console.log(sumsalary(numberOfSalary))
+console.log(sumsalary(numberOfSalary))
 
 
 //Find the sum of all salaries based on country using only HOF method
@@ -99,7 +99,7 @@ console.log(countrysalary(numberOfSalary))
 function averagesalary(data){
         return data.reduce((accumulator,currentValue)=>{
             if(accumulator[currentValue.location]){
-                accumulator[currentValue.location] += currentValue.salary 
+                accumulator[currentValue.location] += currentValue.salary / currentValue.location+2
             }
             else{
                 accumulator[currentValue.location] = currentValue.salary 
